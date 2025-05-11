@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AI Agent Builder</h1>
+            <div class="search-bar">
+                <div class="search-input-wrapper">
+                    <input type="text" id="searchInput" placeholder="Search AI ideas...">
+                    <button id="clearSearch" class="clear-btn">&times;</button>
+                </div>
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                    <option value="Content Creation and Editing">Content Creation & Editing</option>
+                    <option value="Marketing and Advertising">Marketing & Advertising</option>
+                    <option value="Education and Training">Education & Training</option>
+                    <option value="Gaming and Interactive Media">Gaming & Interactive Media</option>
+                    <option value="Customer Service and Virtual Assistance">Customer Service</option>
+                    <option value="Data and Analytics Services">Data & Analytics</option>
+                    <option value="Health and Wellness">Health & Wellness</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="ideas-grid" id="ideasGrid">
+            <!-- Ideas will be dynamically populated here -->
+        </div>
+
+        <div class="idea-detail" id="ideaDetail">
+            <div class="detail-content">
+                <button class="close-btn" onclick="closeDetail()">&times;</button>
+                <h2 id="detailTitle"></h2>
+                <p class="category" id="detailCategory"></p>
+                <div class="detail-section">
+                    <h3>How to Get Started</h3>
+                    <p id="detailSteps"></p>
+                </div>
+                <div class="detail-section">
+                    <h3>Implementation Checklist</h3>
+                    <div class="checklist" id="implementationChecklist">
+                        <!-- Checklist items will be dynamically added -->
+                    </div>
+                </div>
+                <button class="primary-btn" onclick="generateProject()">Generate Project</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
